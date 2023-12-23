@@ -22,9 +22,7 @@ function displayData() {
             <td>${i + 1}</td>
             <td>${bookmarkList[i].name}</td>
             <td>
-                <a href="${
-                  bookmarkList[i].url
-                }" target="_blank" class="btn visit">
+                <a href="${bookmarkList[i].url} target="_blank" class="btn visit">
                     <i class="fa-solid fa-eye"></i> Visit
                 </a>
             </td>
