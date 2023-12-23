@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--=====================/ site info /=====================-->
+    <title>Bookmark</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <!--=====================/ Font Awesome Library /=====================-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--=====================/ Bootstrap CSS links /=====================-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--=====================/ Main Template CSS File /=====================-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- =====================/ Start Section /===================== -->
+      <section id="mainPage" class="py-5 text-center">
+        <h1 class="ff-pacifico fs-50 mb-5 position-relative w-fit m-auto">
+          Bookmarker
+        </h1>
+        <div class="container">
+          <div class="inputsArea my-5 p-2 py-4">
+            <h2 class="fs-25 ff-righteous">
+              <span><i class="fa-solid fa-bookmark"></i></span>
+              Bookmark your favorite sites
+              <span><i class="fa-solid fa-bookmark"></i></span>
+            </h2>
+
+            <div class="firstInput text-start mt-4">
+              <label for="siteName" class="form-label fw-600 py-1"
+                ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+              >
+              <input
+                oninput="validationName()"
+                id="siteName"
+                class="form-control"
+                type="text"
+                placeholder="Bookmark Name"
+              />
+            </div>
+
+            <div class="secounInput text-start mt-3">
+              <label for="siteUrl" class="form-label fw-600 py-1"
+                ><i class="fa-solid fa-link"></i> Site URL</label
+              >
+              <input
+                oninput="validationUrl()"
+                id="siteUrl"
+                class="form-control"
+                type="text"
+                placeholder="Website URL"
+              />
+            </div>
+
+            <div id="btnSubmit" class="btn submit mt-4 px-5" onclick="addUrl()">
+              Submit
+            </div>
+          </div>
+
+          <div class="tableOfData">
+            <table class="table text-center">
+              <thead>
+                <tr>
+                  <th>Index</th>
+                  <th>Website Name</th>
+                  <th>Visit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-2">
+              <div class="modal-header border-bottom-0 my-2">
+                <div class="dots d-flex gap-1">
+                  <span class="r dot"></span>
+                  <span class="y dot"></span>
+                  <span class="g dot"></span>
+                </div>
+                <button
+                  type="button"
+                  onclick="closeModal()"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-start">
+                <p class="fs-21 fw-400 ff-bree mb-0 mb-3">
+                  Site Name or Url is not valid, Please follow the rules below :
+                </p>
+                <ul class="list-unstyled fs-18 lh-lg">
+                  <li>
+                    <span class="modalIcon px-2"
+                      ><i class="fa-regular fa-circle-right"></i
+                    ></span>
+                    Site name must contain at least 3 characters
+                  </li>
+                  <li>
+                    <span class="modalIcon px-2"
+                      ><i class="fa-regular fa-circle-right"></i
+                    ></span>
+                    Site URL must be a valid one
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--=====================/ Bootstrap js link /===================== -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--=====================/ Main js link /===================== -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

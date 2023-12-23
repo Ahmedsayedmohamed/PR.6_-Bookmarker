@@ -1,0 +1,136 @@
+/* ############/ Google Fonts links /############ */
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap");
+
+/* ############/ Roots & Global Rules /############ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: px;
+}
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #f7ecde;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.bgModal {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
+.modalIcon {
+  color: #c14120;
+}
+
+.ff-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.ff-righteous {
+  font-family: "Righteous", sans-serif;
+}
+
+.ff-bree {
+  font-family: "Bree Serif", serif;
+}
+
+.fs-50 {
+  font-size: 50px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-21 {
+  font-size: 21px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+/* =================/ start Section /================= */
+#mainPage h1:before {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-color: #fec260;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+#mainPage h1:hover:before {
+  height: 65%;
+}
+
+#mainPage .inputsArea {
+  border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+}
+
+#mainPage .inputsArea h2 {
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#mainPage .inputsArea .form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 5px #fadeb4;
+}
+
+#mainPage .inputsArea .submit {
+  background-color: #d1512d;
+  color: #fff;
+}
+
+#mainPage .inputsArea .submit:hover {
+  background-color: #bb4120;
+  color: #e4e4e5;
+}
+
+#mainPage .table .visit {
+  background-color: #9eb23b;
+  color: #fff;
+}
+
+#mainPage .table .visit:hover {
+  background-color: #8a9e23;
+}
+
+#exampleModal .modal-header .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3ca55c;
+  padding-inline: 5px;
+}
+
+#exampleModal .modal-header .r {
+  background-color: #f15f5d;
+}
+
+#exampleModal .modal-header .y {
+  background-color: #febe2e;
+}
+
+#exampleModal .modal-header .g {
+  background-color: #4db748;
+}
